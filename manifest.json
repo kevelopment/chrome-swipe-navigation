@@ -1,0 +1,12 @@
+{
+  "name": "Chrome Swipe Navigation",
+  "action": {},
+  "description": "Add missing two finger swipe navigation to Chrome(/ium)!",
+  "version": "0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "host_permissions": ["https://*/*"],
+  "permissions": ["activeTab", "scripting", "tabs", "history"]
+}
