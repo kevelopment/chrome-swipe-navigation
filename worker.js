@@ -29,4 +29,7 @@ async function register(tab) {
 }
 
 // register on tab activation
-chrome.tabs.onActivated.addListener(register);
+chrome.tabs.onActivated.addListener((tab) => register(tab));
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) =>
+  register({ tabId, tab })
+);
